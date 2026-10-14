@@ -58,3 +58,17 @@ Initially, AWS CLI reported `NoCredentials` because the IAM role had been attach
 ## Skills Demonstrated
 AWS EC2 · Amazon S3 · IAM · AWS CLI · Linux · Cloud Security · Troubleshooting · SHA-256 Integrity Verification
 
+
+## AWS Architecture Diagram
+
+```mermaid
+flowchart TD
+    A[Amazon EC2 - Linux Server]
+    B[IAM Role - Temporary Credentials]
+    C[(Amazon S3 Bucket)]
+
+    B -.->|Provides credentials| A
+    A <-->|Upload and Download via AWS CLI| C
+```
+  
+
